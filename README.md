@@ -6,6 +6,12 @@
 
 **状态：v0.1 research prototype / 科研构想原型。** 已提供真实可运行的离线结构引擎、可选的 OpenAI-compatible 模型合成、批量研究卡片、初步反驳、只读 RanchoResearch 交接提案、localhost UI 和自动测试。**没有**论文查新后端、真正的实验执行器或已经证明具有原创性的科研成果。模型的生成质量尚未完成基准评测。
 
+## 网页版 · GitHub Pages
+
+NOVA 的**零部署后端、可直接体验**的浏览器演示已经放在 [`docs/index.html`](docs/index.html)。管理员在仓库 [Settings → Pages](https://github.com/RanchoTao/NOVA/settings/pages) 选择 **Deploy from a branch → main → /docs** 后，网站地址为 **https://ranchotao.github.io/NOVA/**。
+
+网页支持科研老虎机、领域及算子筛选、随机种子、收藏、离线质疑、导出 JSON 和研究交接提案。**网页版仅为离线结构化概念生成**，不调用大模型或进行真正的论文查新。模型密钥不会放进公开网页。操作指南：[docs/PAGES.md](docs/PAGES.md)。
+
 ## 快速开始
 
 需要 Python 3.10+；基础功能仅用 Python 标准库。

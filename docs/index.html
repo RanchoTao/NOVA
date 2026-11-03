@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b12">
+  <meta name="description" content="NOVA · 震撼首发！打破科研默认假设，生成可证伪的科学构想。">
+  <title>NOVA — 震撼首发！</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="background-glow" aria-hidden="true"></div>
+  <div class="page">
+    <header class="topbar">
+      <a href="./" class="brand" aria-label="NOVA 首页">
+        <span class="brand-mark">✳</span>
+        <span>NOVA<span class="period">.</span></span>
+        <span class="brand-divider"></span>
+        <span class="brand-sub">SCIENTIFIC IMAGINATION ENGINE</span>
+      </a>
+      <div class="topbar-right">
+        <span class="live-indicator"><span class="pulse"></span> BROWSER DEMO · v0.1</span>
+        <a class="github-link" href="https://github.com/RanchoTao/NOVA" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <p class="eyebrow"><span class="eyebrow-star">✦</span> THE ART OF ASKING IMPOSSIBLE QUESTIONS</p>
+          <h1 id="hero-title">震撼首发<span class="exclamation">！</span><br><span class="english">INNOVATION<span class="exclamation">!</span></span></h1>
+          <p class="hero-intro">不要再从已知论文里寻找下一个微小增量。<br>破坏默认假设，改变限制条件，摇出一个让人忍不住想验证的科学问题。</p>
+          <div class="hero-tags">
+            <span>✳ 取消必要条件</span><span>↗ 改变操作对象</span><span>⤾ 反转因果解释</span><span>⌘ 挑战表示方式</span>
+          </div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="orbit-core"><span>?</span></div>
+          <div class="orbit-label orbit-label-1">WHAT IF?</div>
+          <div class="orbit-label orbit-label-2">WHY NOT?</div>
+        </div>
+      </section>
+
+      <section class="workbench" aria-labelledby="workbench-title">
+        <div class="section-heading">
+          <div><p class="section-index">01 / IDEA GENERATOR</p><h2 id="workbench-title">假设破坏机 <span class="icon-flash">✳</span></h2></div>
+          <span class="mode-pill">● OFFLINE / NO API KEY</span>
+        </div>
+        <div class="machine">
+          <div class="reel-title"><span>RESEARCH SLOT MACHINE</span><span class="small-dots"><b></b><b></b><b></b></span></div>
+          <div class="reels" id="reels" aria-label="三个构想转轮">
+            <div class="reel"><span class="reel-number">REEL 01 / ASSUMPTION</span><strong id="slot-assumption">复杂推理需要更大参数量</strong><span class="reel-foot">QUESTION THE DEFAULT</span></div>
+            <div class="reel"><span class="reel-number">REEL 02 / OPERATOR</span><strong id="slot-operator">取消必要条件</strong><span class="reel-foot">BREAK THE RULE</span></div>
+            <div class="reel"><span class="reel-number">REEL 03 / CONSEQUENCE</span><strong id="slot-question">如果不扩大模型，也能突破能力边界？</strong><span class="reel-foot">TEST THE UNEXPECTED</span></div>
+          </div>
+          <form class="settings" id="controls">
+            <label class="setting"><span>研究领域 / DOMAIN</span><select id="domain"><option value="">全部领域 · EXPLORE ALL</option></select></label>
+            <label class="setting"><span>颠覆方法 / OPERATOR</span><select id="operator"><option value="">随机组合 · SURPRISE ME</option></select></label>
+            <label class="setting setting-short"><span>每轮构想 / COUNT</span><select id="count"><option value="1">1 个</option><option value="3" selected>3 个</option><option value="5">5 个</option></select></label>
+            <label class="setting setting-short"><span>随机种子 / SEED</span><input id="seed" type="number" inputmode="numeric" placeholder="随机" step="1"></label>
+            <button id="spin" class="spin-button" type="submit"><span class="spin-icon">✳</span><span>震撼首发！</span><span class="spin-arrow">↗</span></button>
+          </form>
+          <div class="machine-footer"><span id="catalog-status">正在读取假设目录…</span><span>思考不可能 · 验证最简单</span></div>
+        </div>
+      </section>
+
+      <section class="output" aria-labelledby="output-title">
+        <div class="section-heading output-head">
+          <div><p class="section-index">02 / PROVOCATIONS</p><h2 id="output-title">惊喜卡片 <span class="output-count" id="result-count">/ 0</span></h2></div>
+          <div class="output-tools">
+            <button type="button" id="tab-current" class="tab active" aria-pressed="true">本轮结果</button>
+            <button type="button" id="tab-saved" class="tab" aria-pressed="false">收藏夹 <span id="saved-count">0</span></button>
+            <button type="button" id="download-batch" class="ghost-button" disabled>导出本轮 JSON ↓</button>
+          </div>
+        </div>
+        <div id="ideas" class="ideas" aria-live="polite">
+          <div class="empty-state">
+            <span class="empty-mark">✳</span>
+            <h3>下一个好问题，从这里开始。</h3>
+            <p>按下「震撼首发！」，用结构化的概念变换生成可证伪的科研构想。</p>
+            <span>0 个已验证发现 · 100% 等待检验</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto" aria-labelledby="manifesto-title">
+        <div class="manifesto-copy"><span class="section-index">03 / MANIFESTO</span><h2 id="manifesto-title">大胆到离谱。<br><em>严谨到苛刻。</em></h2><p>这里生成的是研究假设，不是已经被证明的新知识。每一个惊人命题，都必须配上可能把它彻底推翻的实验。</p></div>
+        <div class="manifesto-steps"><div><b>01</b><span>BREAK</span><p>打破假设</p></div><div><b>02</b><span>TEST</span><p>最小反证</p></div><div><b>03</b><span>VERIFY</span><p>独立核验</p></div></div>
+      </section>
+    </main>
+
+    <footer class="footer"><div><span class="footer-brand">NOVA ✳</span><span>THINK THE UNTHINKABLE. TEST THE SIMPLEST.</span></div><p>静态演示仅组合维护的科研假设目录，不调用大模型、不会联网查新或执行实验。构想的原创性、正确性和论文价值均未验证。</p><a href="https://github.com/RanchoTao/NOVA" target="_blank" rel="noopener noreferrer">VIEW SOURCE ↗</a></footer>
+  </div>
+  <div role="status" aria-live="polite" class="toast" id="toast"></div>
+</body>
+</html>
