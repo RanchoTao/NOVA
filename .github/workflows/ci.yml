@@ -19,3 +19,15 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: CLI smoke
         run: nova roll --count 2 --seed 42 > /tmp/nova-smoke.json
+
+  static-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test browser-side engine
+        run: node --test tests/site.test.mjs
+      - name: Check static entrypoint
+        run: test -s docs/index.html && test -s docs/styles.css && test -s docs/app.mjs && test -s docs/engine.mjs && test -s docs/seeds.json
