@@ -1,4 +1,4 @@
-# NOVA · 震撼首发！INNOVATION!
+# NOVA — an assumption-breaking research imagination engine
 
 > **Think the unthinkable. Test the simplest. Prove the unexpected.**
 >
